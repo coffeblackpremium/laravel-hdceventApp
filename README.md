@@ -1,4 +1,4 @@
-# HDC event
+<center><h1>HDC event App</h1></center>
 
 This is in App in laravel
 
