@@ -3,38 +3,20 @@
 @section('title', 'HDC Events')
 
 @section('content')
-
-    <h1> Algum Titulo </h1>
-    <img src="/img/banner.jpg" alt="banner">
-    @if(10 > 5)
-    <p> A Condição é Verdadeira </p>
-    @endif
-
-    <p>{{$nome}}</p>
-
-    @if($nome == "Jose"){
-    <p>O Nome é Jose </p>
-    }
-    @elseif($nome == "João")
-    <p> O Nome é {{$nome}} e a idade é {{$idade}} e a sua profissão é {{$profissao}} </p>
-    @else
-    <p>O Nome não é José </p>
-    @endif
-
-    @for($i = 0; $i < count($arr); $i++) 
-        <p style="text-align: center;">{{$arr[$i]}} indice: {{$i}}</p>
-    @endfor
-    <hr>
-    @foreach($nomes as $nomesDasPessoas)
-        <hr>
-        <p style="text-align: center;">{{$nomesDasPessoas}}</p>
-    @endforeach
-
-    @php
-        $name = "João Neto";
-        echo $name;
-    @endphp
-
-    <!-- Comentário com HTML -->
-    {{-- Comentario no blade --}}
+    <div id="search-container" class="col-md-12">
+        <h1>Busque um Evento</h1>
+        <form action="">
+            <input type="text" id="search" name="search" class="form-control" placeholder="procurar...">
+        </form>
+    </div>
+    <div id="events-container" class="col-md-12">
+        <h2>Próximos Eventos</h2>
+        <p class="subtitle">Veja os eventos dos próximos dias</p>
+        <div id="cards-container" class="row">
+            @foreach($events as $event)
+            <div class="card col-md-3">
+                <img src="/img/event_placeholder.jpg" alt="{{$event->title}}">
+            </div>
+        </div>
+    </div>
 @endsection
