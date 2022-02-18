@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/script.js"></script>
 
-    <title>@yield('tittle', 'Eventosss')</title>
+    <title>Evento supimpa - @yield('tittle')</title>
 
     <!-- Fonte do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
