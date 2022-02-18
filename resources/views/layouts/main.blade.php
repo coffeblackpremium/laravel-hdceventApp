@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/js/script.js"></script>
 
-    <title>@yield('tittle')</title>
+    <title>@yield('tittle', 'Eventosss')</title>
 
     <!-- Fonte do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,32 @@
 </head>
 
 <body>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbar">
+                    <a href="" class="navbar-brand">
+                        <img src="/img/hdcevents_logo.svg" alt="HDC events"  />
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/events/create" class="nav-link">Criar Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Entrar</a>                            
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Cadastrar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </body>
+
     @yield('content')
 
     <footer>
